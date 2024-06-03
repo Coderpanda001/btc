@@ -60,3 +60,26 @@ st.subheader('Predicted Future Days Bitcoin Price')
 z = np.array(z)
 z = scaler.inverse_transform(z.reshape(-1,1))
 st.line_chart(z)
+    # Display MarketWatch queries
+    st.markdown("---")
+    st.markdown("## Queries")
+    st.markdown("Contact Us:")
+    st.markdown("- main site: https://tangerine-kangaroo-71ab69.netlify.app/")
+    st.markdown("- Email: support@gmail.com")
+
+    # Horizontal scrolling disclaimer text
+    st.markdown("---")
+    st.write(
+        """
+        <div style="overflow-x: auto; white-space: nowrap;">
+            <marquee behavior="scroll" direction="left" scrollamount="5">
+                Intraday Data provided by FACTSET and subject to terms of use. 
+                Historical and current end-of-day data provided by FACTSET. 
+                All quotes are in local exchange time. Real-time last sale data for U.S. 
+                stock quotes reflect trades reported through Nasdaq only. 
+                Intraday data delayed at least 15 minutes or per exchange requirements.
+            </marquee>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
