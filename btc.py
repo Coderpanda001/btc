@@ -96,16 +96,20 @@ end=end_date))
     else:
         st.error(f"Suggested Action: {suggested_action}")
     
-    # Display MarketWatch queries
-    st.markdown("---")
+    # Display MarketWatch queriesst.markdown("---")
     st.markdown("## Queries")
-    st.markdown("Contact Us:")
-    st.markdown("- main site: https://tradelit.netlify.app ")
-    st.markdown("- Email: genshindeadsoul@gmail.com ")
+    st.markdown("Contact / support:")
 
-    # Horizontal scrolling disclaimer text
-    st.markdown("---")
-    st.write(
+    # Define the URL
+    url = "https://tradelitcare.streamlit.app"
+
+    # Create the button and add the redirection logic
+    if st.button('Contact / Support Us'):
+        st.markdown(f"[Click here to visit our support site]({url})")
+        st.experimental_rerun()
+        # Horizontal scrolling disclaimer text
+        st.markdown("---")
+        st.write(
         """
         <div style="overflow-x: auto; white-space: nowrap;">
             <marquee behavior="scroll" direction="left" scrollamount="5">
